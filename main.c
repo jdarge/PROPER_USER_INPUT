@@ -3,18 +3,19 @@
 
 int main() {
 
-    char* str = (char*) malloc (sizeof(char) * 30);
-    char* ptr;
-    int x;
+    char *str = (char *) malloc(sizeof(char) * 30);
+    char *ptr;
+    int x, temp;
 
     scanf("%s", str);
-  
-    // str contains the value we wish to parse
-    // temp value holder
-    // base: decimal (10) ; binary (2)
+    while ((temp = getchar() != '\n') && temp != EOF);
+
     x = (int) strtol(str, &ptr, 10);
 
-    printf("%d", x);
+    printf("%d\n", x);
+
+    scanf("%s", str);
+    printf("%s\n", str);
 
     return 0;
 }
